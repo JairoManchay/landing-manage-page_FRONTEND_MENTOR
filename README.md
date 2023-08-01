@@ -94,3 +94,9 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+
+
+## References
+For know more about the css in paragraph
+I used this page: 
+[Paragraph Styles](https://lenguajecss.com/css/fuentes-y-tipografias/textos-y-alineaciones/)
