@@ -1,152 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Manage landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-  <link rel="stylesheet" href="./css/landing.css">
-</head>
-<body>
+    <title>Frontend Mentor | Manage landing page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/landing.css" />
+  </head>
+  <body id="pagina">
+    <header class="header">
+      <div class="header__contenedor">
+        <div class="header__barra">
+          <div class="header__logo">
+            <img src="./images/logo.svg" alt="" srcset="" />
+          </div>
+          <!-- header__logo -->
+
+          <div class="header__navegacion" id="nav__header">
+            <a href="#" class="header__navegacion__link">Pricing</a>
+            <a href="#" class="header__navegacion__link">Product</a>
+            <a href="#" class="header__navegacion__link">About Us</a>
+            <a href="#" class="header__navegacion__link">Careers</a>
+            <a href="#" class="header__navegacion__link">Community</a>
+          </div> <!-- Desktop -->
+
+          <!--mobil-->
+          <nav class="header__nav" id="nav">
+            <div class="header__navegacion-mobil" id="nav__header">
+              <a href="#" class="header__navegacion__link-mobile">Pricing</a>
+              <a href="#" class="header__navegacion__link-mobile">Product</a>
+              <a href="#" class="header__navegacion__link-mobile">About Us</a>
+              <a href="#" class="header__navegacion__link-mobile">Careers</a>
+              <a href="#" class="header__navegacion__link-mobile">Community</a>
+            </div>
+            
+
+          </nav>
+          <!-- header-navegacion -->
+          
+          
+
+          <img src="./images/icon-hamburger.svg" alt="" id="toggle" class="header__mobil-hamburguesa">
 
 
-  <section class="logo_fondo"></section>
-  <header class="cabecera">
-    <section id="logo">
-      <img src="./images/logo.svg" alt="" srcset="">
+          <input id="button" class="btn__started" value="Get Started" type="submit">
+        </div>
+
+        <div class="header__alineado">
+          <div class="header__texto">
+            <h1 class="header__heading">
+              Bring everyone together to build better products.
+            </h1>
+            <p class="header__parrafo">
+              Manage makes it simple for software teams to plan day-to-day tasks
+              while keeping the larger team goals in view.
+            </p>
+            <button id="button" class="btn__started" type="submit">Get Started</button>
+          </div>
+
+          <div class="header__grafico">
+            <img
+              src="./images/illustration-intro.svg"
+              alt="imagen del header"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="contenido">
+      <div class="contenido__contenedor">
+        <div class="contenido__grid">
+          <div class="encabezado">
+            <h2 class="encabezado__cabecera">What’s different about Manage?</h2>
+            <p class="encabezado__parrafo">
+              Manage provides all the functionality your team needs, without the
+              complexity. Our software is tailor-made for modern digital product
+              teams.
+            </p>
+          </div>
+
+          <div class="lista">
+            <div class="lista__contenido">
+              <span class="lista__contenido_burbuja">01</span>
+              <p class="lista_contenido_cabecera">
+                Track company-wide progress
+              </p>
+              <div class="lista__contenido_parrafo">
+                See how your day-to-day tasks fit into the wider vision. Go from
+                tracking progress at the milestone level all the way done to the
+                smallest of details. Never lose sight of the bigger picture
+                again.
+              </div>
+            </div>
+
+            <div class="lista__contenido">
+              <span class="lista__contenido_burbuja">02</span>
+              <p class="lista_contenido_cabecera">Advanced built-in reports</p>
+              <div class="lista__contenido_parrafo">
+                Set internal delivery estimates and track progress toward
+                company goals. Our customisable dashboard helps you build out
+                the reports you need to keep key stakeholders informed.
+              </div>
+            </div>
+
+            <div class="lista__contenido">
+              <span class="lista__contenido_burbuja">03</span>
+              <p class="lista_contenido_cabecera">
+                Everything you need in one place
+              </p>
+              <div class="lista__contenido_parrafo">
+                Stop jumping from one service to another to communicate, store
+                files, track tasks and share documents. Manage offers an
+                all-in-one team productivity solution.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="post">
+      <div class="">
+        <h2 class="post__heading">What they’ve said</h2>
+
+        <div class="card">
+          <div class="card__listado swiper testimonial__js__slider">
+            <div class="swiper-wrapper">
+              <div class="card__elemento swiper-slide">
+                <div class="card__foto">
+                  <img
+                    src="./images/avatar-anisha.png"
+                    alt="imagen de anisha"
+                  />
+                </div>
+                <h4 class="card__parrafo">Anisha Li</h4>
+                <p class="card__comentario">
+                  “Manage has supercharged our team’s workflow. The ability to
+                  maintain visibility on larger milestones at all times keeps
+                  everyone motivated.”
+                </p>
+              </div>
+              <!-- card__elemento -->
+
+              <div class="card__elemento swiper-slide">
+                <div class="card__foto">
+                  <img src="./images/avatar-ali.png" alt="imagen de ali" />
+                </div>
+                <h4 class="card__parrafo">Ali Bravo</h4>
+                <p class="card__comentario">
+                  “We have been able to cancel so many other subscriptions since
+                  using Manage. There is no more cross-channel confusion and
+                  everyone is much more focused.”
+                </p>
+              </div>
+              <!-- card__elemento -->
+
+              <div class="card__elemento swiper-slide">
+                <div class="card__foto">
+                  <img
+                    src="./images/avatar-richard.png"
+                    alt="imagen de richard"
+                  />
+                </div>
+                <h4 class="card__parrafo">Richard Watts</h4>
+                <p class="card__comentario">
+                  “Manage allows us to provide structure and process. It keeps
+                  us organized and focused. I can’t stop recommending them to
+                  everyone I talk to!”
+                </p>
+              </div>
+              <!-- card__elemento -->
+
+              <div class="card__elemento swiper-slide">
+                <div class="card__foto">
+                  <img
+                    src="./images/avatar-shanai.png"
+                    alt="imagen de shanai"
+                  />
+                </div>
+                <h4 class="card__parrafo">Shanai Gough</h4>
+                <p class="card__comentario">
+                  “Their software allows us to track, manage and collaborate on
+                  our projects from anywhere. It keeps the whole team in-sync
+                  without being intrusive.”
+                </p>
+              </div>
+              <!-- card__elemento -->
+            </div>
+          </div>
+
+          <div class="swiper-pagination testimonial__pagination__js"></div>
+        </div>
+
+        <div class="post__boton">
+          <button id="button" class="btn__started" type="submit">Get Started</button>
+        </div>
+      </div>
     </section>
-    <ul class="grupo_lista">
-      <li>
-        <a href="#">Pricing</a>
-      </li>
-      <li>
-        <a href="#">Product</a>
-      </li>
-      <li>
-        <a href="#">About Us</a>
-      </li>
-      <li>
-        <a href="#">Careers</a>
-      </li>
-      <li>
-        <a href="#">Community</a>
-      </li>
-    </ul>
-    <section id="btn">
-      <input type="submit" value="Get Started" id="btn_started">
-    </section>
-  </header>
 
-  
-  
-  <main>
-    
-    <section class="main_center">
-      
-      <article class="main_left">
-        <h1>Bring everyone together to build better products.</h1>
-        <p>Manage makes it simple for software teams to plan day-to-day 
-          tasks while keeping the larger team goals in view.</p>
-          <input type="submit" value="Get Started" id="btn_started_main">
-      </article>
-        
-      <article class="main_rigth">
-        <img src="./images/illustration-intro.svg" alt="" id="imagem_central">
-        
-      </article>
+    <div class="contenido__final">
+      <div class="contenido__final__contenedor">
+        <div class="agrupacion">
+          <div class="agrupacion__texto">
+            <h3>Simplify how your team works today.</h3>
+          </div>
+          <div class="agrupacion__boton">
+            <button id="button" class="btn__started" type="submit">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    </section>
-      
-    <section class="main_center_2">
+    <footer>
+      <div class="bloque">
+        <div class="bloque__contenedor">
+          <div class="informacion">
 
-      <section class="question_main">
-        <h2>What’s different about Manage?</h2>
-        <p>Manage provides all the functionality your team needs, without 
-          the complexity. Our software is tailor-made for modern digital 
-          product teams. </p>
-      </section>
+            <div class="informacion__cuadro-1">
+              <div class="informacion__logo">
+                <img src="./images/logo-white.svg" alt="logo footer" class="imagen__logo-blanco">
+              </div>
+              <div class="informacion__iconos">
+                <img src="./images/icon-facebook.svg" alt="icono de facebook" class="iconos__footer">
+                <img src="./images/icon-youtube.svg" alt="icono de youtube" class="iconos__footer">
+                <img src="./images/icon-twitter.svg" alt="icono de twitter" class="iconos__footer">
+                <img src="./images/icon-pinterest.svg" alt="icono de pinterest" class="iconos__footer">
+                <img src="./images/icon-instagram.svg" alt="icono de instagram" class="iconos__footer">
+              </div>
+            </div> <!--informacion__cuadro-1-->
 
-      <section class="list_answer">
-        <section class="list_comment">
-          <span>01</span>
-          <section class="comment">
-            <h3>Track company-wide progress</h3>
-            <p>See how your day-to-day tasks fit into the wider vision. Go from 
-              tracking progress at the milestone level all the way done to the 
-              smallest of details. Never lose sight of the bigger picture again.</p>
-          </section>
-        </section>
-      </section>
-    </section>
-      
-      <section class="logo_fondo_body"></section>
-  </main>
+            <div class="informacion__cuadro-2">
 
-  
-  
+                <ul class="sub__informacion">
+                  <li>Home</li>
+                  <li>Pricing</li>
+                  <li>Products</li>
+                  <li>About</li>
+                </ul> <!--informacion__cuadro-2-->
+
+                <ul class="sub__informacion">
+                  <li>Us Careers</li>
+                  <li>Community</li>
+                  <li>Privacy Policy</li>
+                </ul><!--informacion__cuadro-3-->
+            </div>
+
+            <div class="informacion__cuadro-3">
+              <div class="formulario">
+                <div class="formulario__input">
+                  <input
+                    type="text"
+                    name="inbox"
+                    id="texto"
+                    class="input__texto"
+                    placeholder="Updates in your inbox…
+                "
+                  />
+                  <p class="formulario__input-p" id="mensaje__error">Please insert a valid email</p>
+                </div>
+                <div class="formulario__boton">
+                  <button id="button__go" class="btn__started" type="submit">Go</button>
+                </div>
+              </div>
+
+              <div class="copyright">
+                <p>Copyright 2020. All Rights Reserved</p>
+              </div>
+            </div> <!--informacion__cuadro-4-->
+
+            <div class="informacion__cuadro-4">
+
+                <p>Copyright 2020. All Rights Reserved</p>
 
 
-  02
-  Advanced built-in reports
-  Set internal delivery estimates and track progress toward company 
-  goals. Our customisable dashboard helps you build out the reports 
-  you need to keep key stakeholders informed.
+              <div class="attribution">
+                Challenge by
+                <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+                  >Frontend Mentor</a
+                >. Coded by <a href="https://github.com/JairoManchay/landing-manage-page_FRONTEND_MENTOR">Jairo Manchay</a>.
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
 
-  03
-  Everything you need in one place
-  Stop jumping from one service to another to communicate, store files, 
-  track tasks and share documents. Manage offers an all-in-one team 
-  productivity solution.
-
-  What they’ve said
-
-  Anisha Li
-  “Manage has supercharged our team’s workflow. The ability to maintain 
-  visibility on larger milestones at all times keeps everyone motivated.”
-
-  Ali Bravo
-  “We have been able to cancel so many other subscriptions since using 
-  Manage. There is no more cross-channel confusion and everyone is much 
-  more focused.”
-
-  Richard Watts
-  “Manage allows us to provide structure and process. It keeps us organized 
-  and focused. I can’t stop recommending them to everyone I talk to!”
-
-  Shanai Gough
-  “Their software allows us to track, manage and collaborate on our projects 
-  from anywhere. It keeps the whole team in-sync without being intrusive.”
-
-  Get Started
-
-  Simplify how your team works today.
-  Get Started
-
-  Home
-  Pricing
-  Products
-  About Us
-  Careers
-  Community
-  Privacy Policy
-
-  Updates in your inbox…
-  Go
-
-  Copyright 2020. All Rights Reserved
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/contenido.js"></script>
+  </body>
 </html>
