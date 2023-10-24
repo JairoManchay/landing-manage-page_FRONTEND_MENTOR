@@ -8,11 +8,6 @@ var swiper = new Swiper(".testimonial__js__slider", {
     // Optional parameters
   direction: 'horizontal',
   loop: true,
-  brackpoints:{
-    600:{
-      slidePerView: 1
-    }
-  },
 
   // If we need pagination
   pagination: {

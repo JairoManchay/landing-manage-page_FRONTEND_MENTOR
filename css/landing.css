@@ -230,11 +230,12 @@ img {
 }
 
 .header__navegacion-mobil{
+    padding: 5rem 0;
     background-color: rgb(250,250,250);
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 45%;
+    height: 65%;
     margin: 0 auto;
     gap: 3rem;
     align-items: center;
@@ -249,7 +250,7 @@ img {
     position: fixed;
     top: 12%;
     left: 0;
-    height: 100vh;
+    height: 130vh;
     width: 100%;
     margin-left: -100%;
     transition: all .2s linear;
@@ -452,10 +453,11 @@ img {
     background-image: url(../images/bg-tablet-pattern.svg);
     background-size: 20rem;
     background-repeat: no-repeat;
-    top: 65%;
+    top: 95%;
     height: 80rem;
-    width: 22rem;
-    right: -18%;
+    width: 10rem;
+    overflow: hidden;
+    right: 1%;
     z-index: -999;
     position: absolute;
 }
@@ -465,7 +467,7 @@ img {
         content: '';
         background-image: url(../images/bg-tablet-pattern.svg);
         background-size: 40rem 38rem;
-        top: 75%;
+        top: 180%;
         height: 80rem;
         width: 22rem;
         right: 0;
@@ -473,62 +475,53 @@ img {
 }
 
 @media (min-width: 768px) { 
-    .contenido::before{
+    .contenido{
         background-image: url(../images/bg-tablet-pattern.svg);
-        background-position: -30rem;
-        background-size: 50rem;
-        top: 70%;
-        left: -5%;
+        background-repeat: no-repeat;
+        background-position: -32rem 25rem;
+        background-size: 45rem;
+        padding: 5rem 0;
+        position: relative;
     }
-}
-
-@media (min-width: 800px) { 
     .contenido::before{
-        background-image: url(../images/bg-tablet-pattern.svg);
-        background-position: -30rem;
-        background-size: 55rem;
-        top: 60%;
-        left: -10%;
-        width: auto;
+        content: '';
+        background-image: none;
     }
 }
 
 @media (min-width: 950px) { 
-    .contenido::before{
+    .contenido{
         background-image: url(../images/bg-tablet-pattern.svg);
-        background-position: -40rem ;
+        background-repeat: no-repeat;
+        background-position: -42rem 27rem;
         background-size: 60rem;
-        z-index: -99;
-        top: 70%;
-        width: auto;
-        left: 0;
+        padding: 5rem 0;
+        position: relative;
     }
+    .contenido::before{
+        content: '';
+        background-image: none;
+    }
+
 }
 
 
 @media (min-width: 1280px) { 
-    .contenido::before{
+
+    .contenido{
         background-image: url(../images/bg-tablet-pattern.svg);
-        background-position: -42rem;
-        background-size: 70rem;
-        z-index: -999;
-        top: 120%;
-        width: auto;
-        left: 0;
+        background-repeat: no-repeat;
+        background-position: -35rem 38rem;
+        background-size: 60rem;
+        padding: 5rem 0;
+        position: relative;
+    }
+    .contenido::before{
+        content: '';
+        background-image: none;
     }
 }
 
-@media (min-width: 1480px) { 
-    .contenido::before{
-        background-image: url(../images/bg-tablet-pattern.svg);
-        background-position: -42rem;
-        background-size: 70rem;
-        z-index: -999;
-        top: 150%;
-        width: auto;
-        left: 0;
-    }
-}
 
 .contenido__grid{}
 
@@ -782,7 +775,7 @@ img {
 
 .card__elemento{
     position: relative;
-    max-width: 30vh;        
+    min-width: 50vh;        
     background-color:  hsl(228, 29%, 97%);
     display: flex;
     flex-direction: column;
@@ -793,7 +786,19 @@ img {
 
     .card__elemento{
         position: relative;
-        max-width: 30vh;   
+        max-width: 80vh;   
+        height: 22rem;     
+        background-color:  hsl(228, 29%, 97%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 800px) { 
+    .card__elemento{
+        position: relative;
+        max-width: 90vh;   
         height: 22rem;     
         background-color:  hsl(228, 29%, 97%);
         display: flex;
@@ -805,7 +810,7 @@ img {
 @media (min-width: 950px) { 
     .card__elemento{
         position: relative;
-        max-width: 30vh;        
+        max-width: 80vh;        
         background-color:  hsl(228, 29%, 97%);
         display: flex;
         flex-direction: column;
@@ -816,7 +821,7 @@ img {
 @media (min-width: 1024px) { 
     .card__elemento{
         position: relative;
-        max-width: 40vh;  
+        max-width: 70vh;  
         height: 20rem;         
         background-color:  hsl(228, 29%, 97%);
         display: flex;
@@ -855,11 +860,12 @@ img {
 }
 
 .card__comentario{
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     margin: 0;
     line-height: 1;
     color: var(--dark-grayish-blue);
     text-align: center;
+    font-size: 1.3rem;
 }
 
 @media (min-width: 768px) { 
