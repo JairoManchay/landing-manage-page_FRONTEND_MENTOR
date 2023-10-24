@@ -173,7 +173,7 @@ img {
     padding: 5rem 0;
 }
 
-@media (min-width: 600px) { 
+@media (min-width: 450px) { 
     .header{
         background-position: 10rem -5rem;
         background-size: 60rem 50rem;
@@ -473,7 +473,7 @@ img {
         content: '';
         background-image: url(../images/bg-tablet-pattern.svg);
         background-size: 40rem 38rem;
-        top: 180%;
+        top: 130%;
         height: 80rem;
         width: 22rem;
         right: 0;
